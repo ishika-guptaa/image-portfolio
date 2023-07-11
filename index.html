@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Bodoni Moda", serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(to right, #041308, #0b3317);
+        }
+
+        .left-card {
+            flex-basis: 30%;
+            color: white;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 3rem;
+        }
+
+        .para {
+            margin-top: 10px;
+            /* font-size: 0.9rem; */
+            color: #ddd;
+        }
+
+        .gallery {
+            flex-basis: 50%;
+            display: grid;
+            gap: 10px;
+            /* border: 1px solid white; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 120px;
+            /* grid-template-rows: repeat(4, 1fr); */
+
+        }
+
+        .item {
+            background-size: cover;
+            background-position: top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            background-color: #222;
+            background-blend-mode: hard-light;
+            transition: all .9s ease-in-out;
+        }
+
+        .item:hover {
+            background-color: #555;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .box1 {
+            grid-row: span 2;
+        }
+
+        .box2 {
+            grid-column: span 2;
+        }
+
+        .box4 {
+            grid-row: span 2;
+        }
+
+        .box5 {
+            grid-column: span 2;
+        }
+
+        .box7 {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                height: 100%;
+                flex-direction: column;
+                padding: 50px 20px 0 20px;
+
+            }
+
+            .left-card {
+                width: 100%;
+            }
+
+            .gallery {
+                width: 80%;
+                grid-auto-rows: 220px;
+            }
+
+            .item {
+                grid-row: span 1;
+                grid-column: span 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-card">
+            <h2 class="heading">My Portfolio</h2>
+            <p class="para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
+                vero ducimus magni minima corrupti enim totam cum, eligendi quam!
+                Neque!
+            </p>
+        </div>
+        <div class="gallery">
+            <div class="item box1" style="
+            background-image: url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box2" style="
+            background-image: url(https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box3 " style="
+            background-image: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1948&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box4" style="
+            background-image: url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box5" style="
+            background-image: url(https://plus.unsplash.com/premium_photo-1666792562882-8bd04befec7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box6" style="
+            background-image: url(https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+          ">
+                Nature
+            </div>
+            <div class="item box7" style="
+            background-image: url(https://plus.unsplash.com/premium_photo-1666963323736-5ee1c16ef19d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80);
+          ">
+                Nature
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
